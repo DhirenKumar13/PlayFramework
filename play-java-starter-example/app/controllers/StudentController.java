@@ -47,7 +47,7 @@ public class StudentController extends Controller {
 		Student student = new StudentHandler().getOneStudentBasedOnId(id);
 
 		if (student == null) {
-			notFound(StudentUtility.createResponse("Student with id :" + id + " is not available", Boolean.FALSE));
+			return notFound(StudentUtility.createResponse("Student with id :" + id + " is not available", Boolean.FALSE));
 		}
 		JsonNode studentNode = Json.toJson(student);
 		return ok(studentNode);
@@ -64,7 +64,7 @@ public class StudentController extends Controller {
 		boolean student = new StudentHandler().deleteStudent(id);
 
 		if (!student) {
-			notFound(StudentUtility.createResponse("Student with id :" + id + " is not available ", Boolean.FALSE));
+			return notFound(StudentUtility.createResponse("Student with id :" + id + " is not available ", Boolean.FALSE));
 		}
 		return ok(StudentUtility.createResponse("Student with id :" + id + " is deleted ", Boolean.TRUE));
 	}

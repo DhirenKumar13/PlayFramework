@@ -163,3 +163,21 @@ DELETE        localhost:9000/student/10
 }   200 OK
 
 #=========================================================================
+
+GET        localhost:9000/student/13
+
+{
+    "statusIs": false,
+    "body": "Student with id :13 is not available"
+}
+
+#=========================================================================
+
+DELETE        localhost:9000/student/13
+
+{
+    "statusIs": false,
+    "body": "Student with id :13 is not available"
+}
+
+#=========================================================================
