@@ -1,0 +1,165 @@
+#RESONSES <<===================================================================
+
+When initially no students are there :
+
+GET      localhost:9000
+
+#=========================================================================
+
+[]  200 OK
+
+POST    localhost:9000  
+
+#=========================================================================
+
+Request
+
+{
+   		"firstName": "Dhiren",
+  		 "lastName": "Kumar",
+  		 "age": 24
+}
+
+Response
+
+{
+    "statusIs": true,
+    "body": "{\"firstName\":\"Dhiren\",\"lastName\":\"Kumar\",\"age\":24,\"id\":0,\"token\":\"5f24a811-ef9a-4141-979c-27bbfeb5c841\"}"
+}   201 Created
+
+
+#=========================================================================
+
+We did POST for multiple times with the same content
+
+#=========================================================================
+
+GET           localhost:9000
+
+#=========================================================================
+
+[
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 0,
+        "token": "5f24a811-ef9a-4141-979c-27bbfeb5c841"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 1,
+        "token": "4e49fc07-2c41-4aca-a245-1b9a70a4fd67"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 2,
+        "token": "56019fb6-bb2e-467e-8e0e-7f48b1c1417d"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 3,
+        "token": "12c9a7dc-3cc9-46bf-ae56-0cd19835f7f0"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 4,
+        "token": "2cf15f3c-acbd-4f3e-9884-3d3c55315fe1"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 5,
+        "token": "020a579c-36a0-4681-a240-a356d554c744"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 6,
+        "token": "6abe1557-e98b-4a07-ba58-0014738c361b"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 7,
+        "token": "a3e30661-f9eb-43e6-bb13-0eca2e19e257"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 8,
+        "token": "9d3d208e-3a78-4b5e-8e16-b59bc0103f50"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 9,
+        "token": "8543ee8c-cf7f-4ff1-9d1a-2625be68a565"
+    },
+    {
+        "firstName": "Dhiren",
+        "lastName": "Kumar",
+        "age": 24,
+        "id": 10,
+        "token": "56f4fc52-b9de-4ec9-8fae-e8b5dfd012dd"
+    }
+]    200 OK
+
+#=========================================================================
+
+GET     localhost:9000/student/7
+
+#=========================================================================
+
+{
+    "firstName": "Dhiren",
+    "lastName": "Kumar",
+    "age": 24,
+    "id": 7,
+    "token": "a3e30661-f9eb-43e6-bb13-0eca2e19e257"
+}   200 OK
+
+#=========================================================================
+
+PUT        localhost:9000/student
+
+#=========================================================================
+
+{
+	"id":7,
+	"firstName": "Anushka",
+    "lastName": "Sharma",
+    "age": 24
+}
+
+{
+    "firstName": "Anushka",
+    "lastName": "Sharma",
+    "age": 24,
+    "id": 7,
+    "token": "a3e30661-f9eb-43e6-bb13-0eca2e19e257"
+}   200 OK
+
+#=========================================================================
+
+DELETE        localhost:9000/student/10
+
+{
+    "statusIs": true,
+    "body": "Student with id :10 is deleted "
+}   200 OK
+
+#=========================================================================
