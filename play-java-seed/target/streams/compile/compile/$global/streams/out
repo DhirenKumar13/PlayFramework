@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0mE:\GitRepositories\PlayFramework\play-java-seed\app\controllers\StudentController.java:12:1: package student does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport student.Student;[0m
+[0m[[0m[31merror[0m] [0m[0mE:\GitRepositories\PlayFramework\play-java-seed\app\controllers\StudentController.java:13:1: package student does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport student.StudentHandler;[0m
+[0m[[0m[31merror[0m] [0m[0mE:\GitRepositories\PlayFramework\play-java-seed\app\controllers\StudentController.java:14:1: package student does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport student.StudentUtility;[0m
