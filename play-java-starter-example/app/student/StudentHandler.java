@@ -43,4 +43,17 @@ public class StudentHandler {
 		return studentMap.remove(id) != null;
 	}
 	
+	public Student CreateStudent(String name,String lname,Integer age) {
+		Student studentObj = new Student();
+		Integer id = studentMap.size() + 100;
+		String token = UUID.randomUUID().toString();
+		studentObj.setId(id);
+		studentObj.setToken(token);
+		studentObj.setFirstName(name);
+		studentObj.setAge(age);
+		studentObj.setLastName(lname);
+		studentMap.put(id, studentObj);
+		return studentObj;
+	}
+	
 }
